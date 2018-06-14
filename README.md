@@ -1,6 +1,6 @@
 # Keras Faster-RCNN
 
-> this is a very userful implementation of faster-rcnn based on tensorflow and keras, the model is very clear and just saved in .h5 file, out of box to use, and easy to train on other data set with full support. if you have any question, feel free to ask me via wechat: jintianiloveu
+> This is a very userful implementation of faster-rcnn on Tensorflow and Keras. The model is very clear and just saved in a .h5 file format, out of box to use, and easy to train on other dataset with full support. If you have any question, feel free to ask me via wechat: jintianiloveu
 
 ## Requirements
 Basically, this code supports both python2.7 and python3.5, the following package should installed:
@@ -8,6 +8,11 @@ Basically, this code supports both python2.7 and python3.5, the following packag
 * keras
 * scipy
 * cv2
+
+Run the following, to install all the dependencies
+```
+for req in $(cat requirements.txt); do pip install $req; done
+```
 
 ## Out of box model to predict
 
