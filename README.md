@@ -14,7 +14,7 @@ Run the following, to install all the dependencies
 for req in $(cat requirements.txt); do pip install $req; done
 ```
 
-## Out of box model to predict
+## Out of the box model to predict
 
 I have trained a model to predict kitti. I will update a dropbox link here later. Let's see the result of predict:
 
@@ -22,20 +22,20 @@ I have trained a model to predict kitti. I will update a dropbox link here later
 
 ## Train New Dataset
 
-to train a new dataset is also very simple and straight forward. Simply convert your detection label file whatever format into this format:
+Training a new dataset is very simple and straightforward. Simply convert your detection label txt file (for example: kitti_simple_label.txt) into this format:
 
 ```
-/path/training/image_2/000000.png,712.40,143.00,810.73,307.92,Pedestrian
-/path/training/image_2/000001.png,599.41,156.40,629.75,189.25,Truck
+/path/training/000000.png,712.40,143.00,810.73,307.92,Pedestrian
+/path/training/000001.png,599.41,156.40,629.75,189.25,Truck
 ```
-Which is `/path/to/img.png,x1,y1,x2,y2,class_name`, with this simple file, we don't need class map file, our training program will statistic this automatically.
+Which is `/path/to/img.png,x1,y1,x2,y2,class_name`, with this simple file, we don't need class map file, our training program will learn this automatically.
 
 ## For Predict
 
-If you want see how good your trained model is, simply run:
+If you want to see how good your trained model is, simply run:
 ```
 python test_frcnn_kitti.py
 ```
-you can also using `-p` to specific single image to predict, or send a path contains many images, our program will automatically recognise that.
+You can also use `-p` to specify a single image to predict, or send a path containing many images. Our program will automatically recognize that.
 
 **That's all, help you enjoy!**
