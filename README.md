@@ -1,4 +1,4 @@
-# Keras Faster-RCNN
+# Keras implementation of Faster-RCNN
 
 > This is a very userful implementation of faster-rcnn on Tensorflow and Keras. The model is very clear and just saved in a .h5 file format, out of box to use, and easy to train on other dataset with full support. If you have any question, feel free to ask me via wechat: jintianiloveu
 
@@ -20,7 +20,7 @@ I have trained a model to predict kitti. I will update a dropbox link here later
 
 <img src="http://opbocoyb4.bkt.clouddn.com/000010.png" align="center">
 
-## Train New Dataset
+## Training a model on a Dataset
 
 Training a new dataset is very simple and straightforward. Simply convert your detection label txt file (for example: kitti_simple_label.txt) into this format:
 
@@ -30,7 +30,7 @@ Training a new dataset is very simple and straightforward. Simply convert your d
 ```
 Which is `/path/to/img.png,x1,y1,x2,y2,class_name`, with this simple file, we don't need class map file, our training program will learn this automatically.
 
-## For Predict
+## To predict detections
 
 If you want to see how good your trained model is, simply run:
 ```
